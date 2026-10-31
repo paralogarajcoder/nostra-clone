@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="flex items-center justify-between p-3 ">
+        <h1 class="fond-bold text-3xl ">NOSTRA</h1>
+        <ul class="grid grid-cols-5 gap-5 text-yellow-500 hidden md:grid">
+            <li class="hover:underline hover:text-black"><a href="intex.html">HOME</a></li>
+            <li class="hover:underline hover:text-black"><a href="#new-arrivals">NEW ARRIVELS</a></li>
+            <li class="hover:underline hover:text-black"><a href="#most-wanted">MOST WANTED</a></li>
+            <li class="hover:underline hover:text-black"><a href="product.html">COLLECTIONS</a></li>
+            <li class="hover:underline hover:text-black"><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <ul class="grid grid-cols-4 items-center hidden md:grid">
+            <li><a href=""><svg class="w-7 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                </a></li>
+            <li><a href=""></a><svg class="w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+            </li>
+            <li class="border border-black p-3"><a href="">Explor store</a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- COLLECTION TITLE -->
+
+    <section class="collection-header">
+
+        <h1>Our Collections</h1>
+
+        <p>Explore Our Products</p>
+
+    </section>
+
+
+    <!-- MAIN CONTAINER -->
+
+    <main class="main-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h3>Categories</h3>
+
+            <div class="category-list">
+
+                <label>
+                    <input type="checkbox" value="Universe" class="category-filter">
+                    Universe
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Series" class="category-filter">
+                    Series
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Accessories" class="category-filter">
+                    Accessories
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Fashion" class="category-filter">
+                    Fashion
+                </label>
+
+            </div>
+
+
+            <!-- PRICE FILTER -->
+
+            <h3>Price</h3>
+
+            <div class="price-filter">
+
+                <input type="number" id="minPrice" placeholder="Min Price">
+
+                <input type="number" id="maxPrice" placeholder="Max Price">
+
+                <button id="priceFilterBtn">
+                    Apply
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- PRODUCTS SECTION -->
+
+        <section class="products-section">
+
+
+            <!-- SEARCH AND SORT -->
+
+            <div class="products-top">
+
+                <input type="text" id="searchInput" placeholder="Search Products...">
+
+                <select id="sortProducts">
+
+                    <option value="featured">
+                        Featured
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="name">
+                        Name: A to Z
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PRODUCT COUNT -->
+
+            <div class="product-count">
+
+                <p id="productCount">
+                    12 Products
+                </p>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+
+            <div class="product-grid" id="productContainer">
+
+                <!-- JavaScript மூலம் Products வரும் -->
+
+            </div>
+
+
+            <!-- NO PRODUCTS MESSAGE -->
+
+            <div id="noProducts">
+
+                <h2>No Products Found</h2>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+
+    <!--mail-->
+
+    <section>
+        <div class="grid grid-cols-1 md:grid-cols-2" style="background-color: #27211ade; margin:5%;padding: 5%;">
+            <div class="m-5">
+                <p class="text-xm ">STAY IN THE LOOP</p>
+                <h1 class="text-5xl">A little more style in your inbox</h1>
+                <p class="text-xm m-3">Get updates on fresh arrivals, new collections and special offers.</p>
+            </div>
+            <div>
+                <div class="grid grid-cols-2 m-5 border border-black"
+                    style="width: 90%; height: 40%;background-color:transparent; grid-template-columns: 2fr 1fr; text-align: center;">
+                    <div style="border: 100%;border-color: #000;">
+                        <input style="width:90%;height: 90%; background-color: transparent;" type="text"
+                            placeholder="Enter your email address">
+                    </div>
+                    <div>
+                        <button class="m-1" type="button"
+                            style=" background-color: rgb(211, 211, 84);width: 70%;height: 85%;">Join Us↗</button>
+
+
+                    </div>
+                </div>
+                <p class="text-xm m-3" style="color:rgb(211, 211, 84);">Thanks for joining us! This demo dose not save
+                    email addresses.</p>
+                <p class="text-xm ">No spam. Just good style.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--contact-->
+    <section>
+        <div style="background-color: #27211ade;">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 " style="padding: 5%; ">
+                <div>
+                    <h1 class="text-4xl">NOSTRA.</h1>
+                    <p class="text-xm ">Everyday essentials, fresh finds and styles that feel like you.</p>
+                </div>
+                <div>
+                    <h1 class="text-2xl">Explore</h1>
+                    <a href="">Home</a><br>
+                    <a href="">Collection</a><br>
+                    <a href="">New Arrivals</a>
+                </div>
+                <div>
+                    <h1 class="text-2xl">Need Help?</h1>
+                    <a href="">Contact Us</a><br>
+                    <a href="">Customer Support</a>
+                </div>
+                <div>
+                    <p class="text-xm" style="color:rgb(211, 211, 84);">GOOD STYLE. EVERY DAY.</p>
+                    <p class="text-xm">Find your fit. Make it yours.</p>
+                </div>
+
+            </div>
+            <hr>
+            <div class="flex justify-between m-" style="">
+                <p class="grid">© 2026 NOSTRA. Thoughtfully made for everyday.</p>
+                <a href="intex.html" class="grid" style="">Back to top ↑</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>

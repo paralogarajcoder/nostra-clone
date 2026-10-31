@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA - Contact Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            background-color: #f5f1e9;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #27211a;
+            color: white;
+        }
+
+        nav a:hover {
+            color: rgb(211, 211, 84);
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .contact-input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .send-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #27211a;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .send-btn:hover {
+            background-color: rgb(211, 211, 84);
+            color: black;
+        }
+    </style>
+</head>
+
+<body> <!-- NAVBAR -->
+    <nav class="flex justify-between items-center p-4">
+        <h1 class="text-3xl font-bold">NOSTRA.</h1>
+        <div class="flex gap-4 flex-wrap"> <a href="intex.html">HOME</a> <a href="product.html">COLLECTIONS</a> <a
+                href="contact.html">CONTACT US</a> </div>
+    </nav> <!-- CONTACT SECTION -->
+    <div class="contact-box">
+        <p class="text-sm text-gray-500">WE ARE HERE TO HELP</p>
+        <h1 class="text-4xl font-bold mt-2 mb-4"> Contact Us. </h1>
+        <p class="text-gray-600 mb-6"> Have a question or need help? Send us a message. We would love to hear from you.
+        </p>
+        <form id="contactForm"> <label>Your Name</label> <input type="text" id="name" class="contact-input"
+                placeholder="Enter your name" required> <label>Email Address</label> <input type="email" id="email"
+                class="contact-input" placeholder="Enter your email" required> <label>Subject</label> <input type="text"
+                id="subject" class="contact-input" placeholder="Enter subject" required> <label>Your Message</label>
+            <textarea id="message" class="contact-input" rows="5" placeholder="Write your message" required></textarea>
+            <button type="submit" class="send-btn"> Send Message ↗ </button> </form>
+        <p id="successMessage" class="mt-4 text-green-700"></p>
+    </div> <!-- FOOTER -->
+    <footer class="text-center p-6" style="background-color:#27211a;color:white;">
+        <h1 class="text-2xl font-bold">NOSTRA.</h1>
+        <p class="mt-2"> Everyday essentials, fresh finds and styles that feel like you. </p>
+        <p class="mt-4"> © 2026 NOSTRA. All rights reserved. </p> <a href="intex.html" class="underline"> Back to Home ↑
+        </a>
+    </footer>
+    <script> const contactForm = document.getElementById("contactForm"); contactForm.addEventListener("submit", function (event) { event.preventDefault(); document.getElementById("successMessage").textContent = "Thank you! Your message has been received."; contactForm.reset(); }); </script>
+</body>
+
+</html>
